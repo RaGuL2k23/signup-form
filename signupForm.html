@@ -2,10 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="normalize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-up Form</title>
 </head>
-<body>
-    checkin with dummy content
+<body> 
+     <container>
+         <leftImage>
+            <img src="halie-west-25xggax4bSA-unsplash.jpg"  alt="">
+            <logo>
+              <img src="odin-lined.png" alt="">
+              <h1>ODIN DA</h1>
+            </logo>
+         </leftImage>
+
+        <main>
+            <h2>Hello there, here im handcrafting this form </h2>
+            <h2>hello another text</h2>
+            <h3>and another one</h3>
+
+            <form action="">
+                <p>
+                    <label for="fname">first-name</label>
+                    <input type="text" id="fname">
+                </p>
+                    <p>
+                        <label for="lname">last-name</label>
+                        <input type="text" id="lname">
+                    </p>
+                
+            </form>
+        
+        </main>
+        
+     </container>
 </body>
 </html>
+
+<style>
+    :root{
+
+    }
+    @font-face {
+        font-family: "norse";
+        src: url("Norse-Bold.otf") format('opentype');
+        font-weight: 900;
+        font-style: normal;
+    }
+    container{
+        display: flex;
+    }
+    img{
+        width:max(330px,37vw);
+        height:100vh;
+        position: relative;
+    }
+    img[src="odin-lined.png"]{
+         width: 67px;
+        height: 100px;        
+    }
+    logo{
+        width: max(330px,37vw);
+        background-color: rgb(2,2,2,0.3);
+        position: absolute;
+        top:100px;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &>h1{
+            color:white;
+            font: 3.6em "norse";
+
+        }
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+
+    /* styling of form side */
+     input,button,form,textarea{
+        padding: 0;
+        margin: 0;
+        
+     }
+
+    main{
+         margin-left: 44px;
+         margin-top: 39px;
+    }
+    main p{
+
+    }
+    form{
+        display: flex;
+        &>p{
+            margin-left: min(13px,1.2rem);
+        }
+    }
+     
+</style>
