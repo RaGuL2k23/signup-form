@@ -17,19 +17,46 @@
          </leftImage>
 
         <main>
-            <h2>Hello there, here im handcrafting this form </h2>
-            <h2>hello another text</h2>
-            <h3>and another one</h3>
+            <text>
+                <h2>Hello there, here im handcrafting this form </h2>
+                <h2>hello another text</h2>
+                <h3>and another one</h3>
+            </text>
 
             <form action="">
-                <p>
-                    <label for="fname">first-name</label>
-                    <input type="text" id="fname">
-                </p>
+                <h2>Let's get in touch</h2>
+                <name>
                     <p>
-                        <label for="lname">last-name</label>
-                        <input type="text" id="lname">
+                        <label for="fname">first-name</label>
+                        <input type="text" id="fname">
                     </p>
+                        <p>
+                            <label for="lname">last-name</label>
+                            <input type="text" id="lname">
+                        </p>
+                </name>
+
+                <contact class="h">
+                        <p>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email">
+                        </p>
+                        <p>
+                            <label for="phone">Phone-no:</label>
+                            <input type="tel" id="phone">
+                        </p>
+                </contact>
+
+                <password class="h">
+                        <p>
+                                <label for="pwd">Password</label>
+                                <input type="password" id="pwd">
+                        </p>
+                        <p>
+                                <label for="confirmpwd">Confirm Password</label>
+                                <input type="password" id="confirmpwd">
+                        </p>
+                </password>
                 
             </form>
         
@@ -79,28 +106,49 @@
     body{
         width: 100vw;
         height: 100vh;
+        background-color: rgb(243,243,243);
         /* overflow: hidden; */
     }
 
-    /* styling of form side */
+    /* styling of form's side */
+
+    text>*,form>* >*:nth-child(1),form>*{
+        /* border: 3px solid; */      /*just to make a left gap
+                                     using padding also not seems to 
+                                     be a visualy pleasing ,
+                                     causing gap*/
+        margin-left: 30px;
+    }
      input,button,form,textarea{
         padding: 0;
         margin: 0;
-        
+        width: 150px;
+        box-sizing: border-box;
+        font-size: 100%;
+        font-family: inherit;
+        display: block;/* this is fing important*/
      }
 
-    main{
-         margin-left: 44px;
-         margin-top: 39px;
-    }
-    main p{
-
-    }
-    form{
+      
+    form > *{ /* selects all dirct child of form tag*/
         display: flex;
-        &>p{
-            margin-left: min(13px,1.2rem);
+        &:nth-child(n+2){
+            padding: 0;
+            margin: 0;
+            margin-top: -1.9ch;
         }
+    
+        &>p:nth-child(2){
+            margin-left: max(29px,3.2rem); 
+        }
+        width: 500px;   
+        
     }
-     
+    
+    form{
+         background-color: rgb(255, 255, 255);
+         width: max(500px,63vw) ;
+          padding: 10px;
+    }
+         
 </style>
