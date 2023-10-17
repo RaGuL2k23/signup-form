@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="signupForm.css">
+    <script src="signupForm.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
 </head>
@@ -49,12 +50,12 @@
                     </contact>
                     <password class="h">
                             <p>
-                                    <label for="pwd">Password</label>
-                                    <input type="password" id="pwd">
+                                    <label for="pwd">Password<span aria-label="required"> *</span></label>
+                                    <input required type="password" id="pwd">
                             </p>
                             <p>
-                                    <label for="confirmpwd">Confirm Password</label>
-                                    <input type="password" id="confirmpwd">
+                                    <label class="matchpwd" for="confirmpwd">Confirm Password <span aria-label="required">*</span></label>
+                                    <input  required type="password" id="confirmpwd">
                             </p>
                     </password>
                 </formContainer>
@@ -72,6 +73,9 @@
 <style>
    :root{
     --main-margin:35px;
+    --input-border:#E5E7EB;
+    --input-outline-correct:1.4px solid rgb(14, 60, 242);
+    --input-outline-error:1.4px solid  red;
 }
 @font-face {
     font-family: "norse";
@@ -109,8 +113,7 @@ logo{
 body{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(243,243,243);
-    /* overflow: hidden; */
+    background-color: rgb(243,243,243); 
 }
 
 /* styling of formContainer's side */
@@ -124,6 +127,8 @@ text>*,formContainer>* >*:nth-child(1),formContainer>*,form button,p{
    
 }
  input,button,formContainer,textarea{
+    -webkit-appearance: none;
+    appearance: none;
     padding: 0;
     margin: 0;
     width: 150px;
@@ -131,6 +136,7 @@ text>*,formContainer>* >*:nth-child(1),formContainer>*,form button,p{
     font-size: 100%;
     font-family: inherit;
     display: block;/* this is fing important*/
+    border-radius: 3px;
  }
 
   
@@ -151,8 +157,9 @@ formContainer > *{ /* selects all dirct child of formContainer tag*/
 
 formContainer{
      background-color: rgb(255, 255, 255);
-     width: max(500px,63vw) ;
-     padding-top: 0.3rem;
+     width: max(535px,63vw) ;
+     padding: 0.3rem 0 1.7rem 0;
+     box-shadow: 2px 2px 32px #e5e0e0;
 }
 button{
     margin-top: 19px;
@@ -161,5 +168,35 @@ button{
     color: white;
     padding: 3px;
 }
-         
+/*ux designing*/
+
+input{
+    border: 1px solid var(--input-border);
+    height: 1.36rem;
+    &:focus{
+        outline:var(--input-outline-correct,blue);
+        box-shadow: 2px 2px 3px 0px #8b8b8b;
+}
+&:invalid:focus{
+        outline: var(--input-outline-error,red);
+      
+        
+    }
+label{
+    text-transform: uppercase;
+    font:0.8rem sans-serif;
+}
+    
+}
+.matchpwd{
+     position: relative;
+&:after{
+            content: "*password does not match ";
+            color:red;
+            position: absolute;
+            top:43px;
+            left: 1px;
+            font-size: 0.68rem;
+        }
+    }          
 </style>
