@@ -31,11 +31,11 @@
                     <name>
                         <p>
                             <label for="fname">first-name</label>
-                            <input type="text" id="fname">
+                            <input pattern="[a-zA-Z]+" type="text" id="fname">
                         </p>
                             <p>
                                 <label for="lname">last-name</label>
-                                <input type="text" id="lname">
+                                <input  pattern="[a-zA-Z]+" type="text" id="lname">
                             </p>
                     </name>
                     <contact class="h">
@@ -48,18 +48,18 @@
                                 <input type="tel" id="phone">
                             </p>
                     </contact>
-                    <password class="h">
+                    <password  >
                             <p>
                                     <label for="pwd">Password<span aria-label="required"> *</span></label>
                                     <input required type="password" id="pwd">
                             </p>
                             <p>
-                                    <label class="matchpwd" for="confirmpwd">Confirm Password <span aria-label="required">*</span></label>
+                                    <label  for="confirmpwd">Confirm Password <span aria-label="required">*</span></label>
                                     <input  required type="password" id="confirmpwd">
                             </p>
                     </password>
                 </formContainer>
-                <button type="submit">hello</button> 
+                <button type="button">hello</button> 
                  <p>already have an account? <a href="http://ragul2k23.github.io/rock" target="_blank" rel="noopener noreferrer">log in</a></p>
             </form>
             
@@ -177,7 +177,8 @@ input{
         outline:var(--input-outline-correct,blue);
         box-shadow: 2px 2px 3px 0px #8b8b8b;
 }
-&:invalid:focus{
+
+&:invalid:focus,&:invalid{
         outline: var(--input-outline-error,red);
       
         
