@@ -138,7 +138,7 @@ text>*,formContainer>* >*:nth-child(1),formContainer>*,form button,p{
     appearance: none;
     padding: 0;
     margin: 0;
-    width: 150px;
+    width: 12rem;
     box-sizing: border-box;
     font-size: 100%;
     font-family: inherit;
@@ -216,8 +216,30 @@ label{
             font-size: 0.68rem;
         }
     }      
-    img[src*="926.png"]{
+    img[src*="926.png"]{ 
         width: 100px;
         height: 100px;
     }    
+
+    /* display resizing*/
+    @media screen and (max-width:800px){
+        container{
+            flex-direction: column;
+        }
+        main,leftImage{
+            width: max(720px,78vw);
+        }
+
+        img{
+            width: max(359px,97vw);
+    height: 100vh;
+    position: relative;
+        }
+        formContainer{
+            background-color: rgb(255, 255, 255);
+    width: max(500px,97vw);
+    padding: 0.3rem 0 1.7rem 0;
+    box-shadow: 2px 2px 32px #e5e0e0;
+        }
+    }
 </style>
