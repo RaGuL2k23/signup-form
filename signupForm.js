@@ -19,7 +19,7 @@ function checkPwd(){
 }
 confirmPwd.addEventListener("keyup",checkPwd2)
 
-function checkPwd2(){
+function checkPwd2(){ // check pwd while typing in cnfrmpswrd fld
     
         if(password.value == confirmPwd.value&& password.value!="") {
             confirmPwdLabel.classList.remove("matchpwd");

@@ -11,18 +11,18 @@
 <body> 
      <container>
          <leftImage>
-            <img src="halie-west-25xggax4bSA-unsplash.jpg"  alt="">
+            <img src="fawazlul-rizqi-8I-gdwRMw_M-unsplash.jpg"  alt="">
             <logo>
-              <img src="odin-lined.png" alt="">
-              <h1>ODIN DA</h1>
+              <img src="—Pngtree— bulb icon vector _4977926.png" alt="">
+              <h1>Light ADA </h1>
             </logo>
          </leftImage>
 
         <main>
             <text>
-                <h2>Hello there, here im handcrafting this form </h2>
-                <h2>hello another text</h2>
-                <h3>and another one</h3>
+                <h1>LIGHT'S UP THE <STRONg>STREETS</STRONg></h1>
+                <h2>Hello there, make this world light up with us </h2>
+                
             </text>
 
             <form action="">
@@ -45,7 +45,7 @@
                             </p>
                             <p>
                                 <label for="phone">Phone-no:</label>
-                                <input type="tel" id="phone">
+                                <input pattern="\d{1,10}" type="tel" id="phone">
                             </p>
                     </contact>
                     <password  >
@@ -76,6 +76,10 @@
     --input-border:#E5E7EB;
     --input-outline-correct:1.4px solid rgb(14, 60, 242);
     --input-outline-error:1.4px solid  red;
+}
+h2,h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
 }
 @font-face {
     font-family: "norse";
@@ -167,6 +171,14 @@ button{
     border-radius: 5px;
     color: white;
     padding: 3px;
+    &:active{
+        cursor: pointer;
+        box-shadow: inset 2px 3px 3px gray;
+        background-color: #38380cdd;
+    }
+    &:hover{
+        cursor: pointer;
+    }
 }
 /*ux designing*/
 
@@ -180,14 +192,15 @@ input{
 
 &:invalid:focus,&:invalid{
         outline: var(--input-outline-error,red);
-      
-        
-    }
+      }
+/* &:valid{
+    outline: var(--input-outline-correct);
+} */
+    
+}
 label{
     text-transform: uppercase;
     font:0.8rem sans-serif;
-}
-    
 }
 .matchpwd{
      position: relative;
@@ -199,5 +212,9 @@ label{
             left: 1px;
             font-size: 0.68rem;
         }
-    }          
+    }      
+    img[src*=png]{
+        width: 100px;
+        height: 100px;
+    }    
 </style>
