@@ -1,9 +1,7 @@
-console.log("working");
-let wrongPwdInstructor = false;
+console.log("working"); 
 let password = document.querySelector("input[id=pwd]");
 let button = document.querySelector("button");
-let confirmPwd = document.querySelector("input[id=confirmpwd]");
-let pwdInputs = document.querySelectorAll("input[required]");
+let confirmPwd = document.querySelector("input[id=confirmpwd]"); 
 let confirmPwdLabel = document.querySelector("label[for=confirmpwd]")
 button.addEventListener("click",checkPwd);
 function checkPwd(){
