@@ -29,3 +29,8 @@ function checkPwd2(){ // check pwd while typing in cnfrmpswrd fld
         
      
 }
+
+
+
+button.addEventListener('mousedown',()=>button.classList.add("press"))
+button.addEventListener('mouseup',()=>button.classList.remove("press"))
